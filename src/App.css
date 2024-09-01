@@ -1,0 +1,59 @@
+:root {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    --green: #57cc99;
+    --red: #ef476f;
+    --yellow: #fffd82;
+    --blue: #a2d2ff;
+    --safe: #cfdbd5;
+    background-color: hsla(0, 0%, 100%, 1);
+    background-image: radial-gradient(
+            circle at 84% 7%,
+            hsla(210.85714285714286, 0%, 100%, 1) 4.198152812762385%,
+            transparent 31.0171439605636%
+        ),
+        radial-gradient(
+            circle at 37% 26%,
+            hsla(0, 0%, 100%, 1) 4.198152812762385%,
+            transparent 43.956963501489035%
+        ),
+        radial-gradient(
+            circle at 54% 62%,
+            hsla(0, 0%, 100%, 1) 4.198152812762385%,
+            transparent 29.421779270636545%
+        ),
+        radial-gradient(
+            circle at 0% 0%,
+            hsla(209.99999999999994, 52%, 92%, 1) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 14% 64%,
+            hsla(210.85714285714286, 53%, 87%, 1) 4.198152812762385%,
+            transparent 39.89621666076302%
+        ),
+        radial-gradient(
+            circle at 81% 41%,
+            hsla(210.85714285714286, 53%, 87%, 1) 4.198152812762385%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 33% 91%,
+            hsla(210.85714285714286, 53%, 87%, 1) 4.198152812762385%,
+            transparent 50%
+        );
+    background-blend-mode: normal, normal, normal, normal, normal, normal,
+        normal;
+}
+
+.app {
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+}
+
+.app h1 {
+    text-align: center;
+}
