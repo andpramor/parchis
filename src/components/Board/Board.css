@@ -25,8 +25,14 @@
 .box {
     border: 1px solid black;
     overflow: hidden;
-    padding: 4px;
     background-color: white;
+    padding: 2px;
+}
+
+@media screen and (min-width: 762px) {
+    .box {
+        padding: 4px;
+    }
 }
 
 .redbox {
