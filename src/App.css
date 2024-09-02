@@ -56,4 +56,6 @@
 
 .app h1 {
     text-align: center;
+    font-size: xx-large;
+    text-shadow: 1px 1px 5px var(--blue);
 }
