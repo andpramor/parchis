@@ -1,0 +1,30 @@
+.colorHome {
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+}
+
+.colorHome--turn {
+    box-shadow: 0 0 5px 2px inset var(--turn);
+}
+
+.redHome {
+    background-color: var(--red);
+}
+
+.blueHome {
+    background-color: var(--blue);
+}
+
+.greenHome {
+    background-color: var(--green);
+}
+
+.yellowHome {
+    background-color: var(--yellow);
+}
+
+.colorHome svg {
+    width: 80%;
+    height: auto;
+}

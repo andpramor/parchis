@@ -20,7 +20,6 @@
 
 .quadrant {
     display: grid;
-    place-content: center;
 }
 
 .tile {
@@ -54,17 +53,6 @@
 
 .safe {
     background-color: var(--safe);
-}
-
-#redQuadrant,
-#blueQuadrant,
-#greenQuadrant,
-#yellowQuadrant {
-    border: 1px solid black;
-    background-image: url(../../assets/diceIcon.png);
-    background-size: 60%;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 /* En vez de lo de arriba, componente svg que pueda cambiar de color, que sea un poco más grande cuando sea el dado "rodando". */

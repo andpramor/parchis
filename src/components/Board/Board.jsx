@@ -1,10 +1,11 @@
+import { ColorHome } from '../ColorHome/ColorHome'
 import './Board.css'
 
-export const Board = ({ turn = 'blue' }) => {
+export const Board = ({ turn }) => {
   return (
     <div className='board-container'>
       <div className='board'>
-        <div className='quadrant redtile' id='redQuadrant' />
+        <ColorHome playerColor='red' turn={turn === 'red'} />
         <div className='quadrant' id='topPathQuadrant'>
           <div className='tile' id='tile35' />
           <div className='tile redtile safe' id='redtile1' />
@@ -28,7 +29,7 @@ export const Board = ({ turn = 'blue' }) => {
           <div className='tile redtile' id='redtile7' />
           <div className='tile' id='tile27' />
         </div>
-        <div className='quadrant bluetile' id='blueQuadrant' />
+        <ColorHome playerColor='blue' turn={turn === 'blue'} />
         <div className='quadrant' id='leftPathQuadrant'>
           <div className='tile' id='tile50' />
           <div className='tile' id='tile49' />
@@ -103,7 +104,7 @@ export const Board = ({ turn = 'blue' }) => {
           <div className='tile' id='tile15' />
           <div className='tile' id='tile16' />
         </div>
-        <div className='quadrant greentile' id='greenQuadrant' />
+        <ColorHome playerColor='green' turn={turn === 'green'} />
         <div className='quadrant' id='botPathQuadrant'>
           <div className='tile' id='tile61' />
           <div className='tile yellowtile' id='yellowtile7' />
@@ -127,7 +128,7 @@ export const Board = ({ turn = 'blue' }) => {
           <div className='tile yellowtile safe' id='yellowtile1' />
           <div className='tile' id='tile1' />
         </div>
-        <div className='quadrant yellowtile' id='yellowQuadrant' />
+        <ColorHome playerColor='yellow' turn={turn === 'yellow'} />
       </div>
     </div>
   )

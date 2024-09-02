@@ -6,6 +6,7 @@
     --yellow: #fffd82;
     --blue: #a2d2ff;
     --safe: #cfdbd5;
+    --turn: violet;
     background-color: hsla(0, 0%, 100%, 1);
     background-image: radial-gradient(
             circle at 84% 7%,
