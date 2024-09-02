@@ -2,10 +2,11 @@
     border: 1px solid black;
     display: grid;
     place-items: center;
+    transition: box-shadow 0.3s;
 }
 
 .colorHome--turn {
-    box-shadow: 0 0 5px 2px inset var(--turn);
+    box-shadow: 0 0 5px 3px inset var(--turn-color);
 }
 
 .redHome {
@@ -27,4 +28,11 @@
 .colorHome svg {
     width: 80%;
     height: auto;
+    fill: var(--safe);
+    transition: fill 0.5s, filter 0.5s;
+}
+
+.colorHome--turn svg {
+    fill: var(--turn-color);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }

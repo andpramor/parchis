@@ -1,12 +1,12 @@
 :root {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 16px;
-    --green: #57cc99;
-    --red: #ef476f;
-    --yellow: #fffd82;
-    --blue: #a2d2ff;
+    --green: #44af69;
+    --red: #f8333c;
+    --yellow: #f1db4b;
+    --blue: #2b9eb3;
     --safe: #cfdbd5;
-    --turn: violet;
+    --turn-color: white;
     background-color: hsla(0, 0%, 100%, 1);
     background-image: radial-gradient(
             circle at 84% 7%,

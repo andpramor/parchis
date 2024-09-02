@@ -5,7 +5,7 @@ export const Board = ({ turn }) => {
   return (
     <div className='board-container'>
       <div className='board'>
-        <ColorHome playerColor='red' turn={turn === 'red'} />
+        <ColorHome color='red' turn={turn === 'red'} />
         <div className='quadrant' id='topPathQuadrant'>
           <div className='tile' id='tile35' />
           <div className='tile redtile safe' id='redtile1' />
@@ -29,7 +29,7 @@ export const Board = ({ turn }) => {
           <div className='tile redtile' id='redtile7' />
           <div className='tile' id='tile27' />
         </div>
-        <ColorHome playerColor='blue' turn={turn === 'blue'} />
+        <ColorHome color='blue' turn={turn === 'blue'} />
         <div className='quadrant' id='leftPathQuadrant'>
           <div className='tile' id='tile50' />
           <div className='tile' id='tile49' />
@@ -104,7 +104,7 @@ export const Board = ({ turn }) => {
           <div className='tile' id='tile15' />
           <div className='tile' id='tile16' />
         </div>
-        <ColorHome playerColor='green' turn={turn === 'green'} />
+        <ColorHome color='green' turn={turn === 'green'} />
         <div className='quadrant' id='botPathQuadrant'>
           <div className='tile' id='tile61' />
           <div className='tile yellowtile' id='yellowtile7' />
@@ -124,11 +124,11 @@ export const Board = ({ turn }) => {
           <div className='tile' id='tile66' />
           <div className='tile yellowtile' id='yellowtile2' />
           <div className='tile' id='tile2' />
-          <div className='tile' id='tile66' />
+          <div className='tile' id='tile67' />
           <div className='tile yellowtile safe' id='yellowtile1' />
           <div className='tile' id='tile1' />
         </div>
-        <ColorHome playerColor='yellow' turn={turn === 'yellow'} />
+        <ColorHome color='yellow' turn={turn === 'yellow'} />
       </div>
     </div>
   )
