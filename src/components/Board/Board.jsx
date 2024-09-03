@@ -1,7 +1,7 @@
 import { ColorHome } from '../ColorHome/ColorHome'
 import './Board.css'
 
-export const Board = ({ turn }) => {
+export const Board = ({ children, turn }) => {
   return (
     <div className='board-container'>
       <div className='board'>
@@ -129,6 +129,7 @@ export const Board = ({ turn }) => {
           <div className='tile' id='tile1' />
         </div>
         <ColorHome color='yellow' turn={turn === 'yellow'} />
+        {children}
       </div>
     </div>
   )

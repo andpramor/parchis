@@ -1,42 +1,79 @@
 .colorHome {
-    border: 1px solid black;
-    display: grid;
-    place-items: center;
-    transition: box-shadow 0.3s;
-    background-image: url(../../assets/dice.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 40%;
+  border: 1px solid black;
+  /* display: grid;
+    place-items: center; */
+  position: relative;
+  transition: box-shadow 0.3s;
+  background-image: url(../../assets/dice.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40%;
 }
 
 .colorHome--turn {
-    box-shadow: 0 0 5px 3px inset var(--turn-color);
+  box-shadow: 0 0 5px 3px inset var(--turn-color);
 }
 
 .redHome {
-    background-color: var(--red);
+  background-color: var(--red);
 }
 
 .blueHome {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .greenHome {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 .yellowHome {
-    background-color: var(--yellow);
+  background-color: var(--yellow);
 }
 
 .colorHome svg {
-    width: 60%;
-    height: auto;
-    fill: transparent;
-    transition: fill 0.5s, filter 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+  fill: transparent;
+  transition: fill 0.5s, filter 0.5s;
 }
 
 .colorHome--turn svg {
-    fill: var(--turn-color);
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  fill: var(--turn-color);
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.colorHome--roll {
+  position: absolute;
+  color: transparent;
+  font-weight: bold;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: top 0.3s, color 0.3s;
+}
+
+.colorHome--roll.showRoll {
+  top: 8px;
+  color: white;
+}
+
+.colorHome--move {
+  position: absolute;
+  color: transparent;
+  font-weight: bold;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: top 0.3s, color 0.3s;
+}
+
+.colorHome:hover .colorHome--move {
+  top: 8px;
+  color: white;
 }

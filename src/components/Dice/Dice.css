@@ -1,5 +1,30 @@
 .dice {
-    width: 100px;
-    display: grid;
-    place-items: center;
+  width: clamp(calc(5 * 400px / 30), calc(5 * 90vw / 30), calc(5 * 80dvh / 30));
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+.dice svg {
+  transition: fill 0.3s;
+}
+
+.dice.redDice svg {
+  fill: var(--red);
+}
+
+.dice.greenDice svg {
+  fill: var(--green);
+}
+
+.dice.yellowDice svg {
+  fill: var(--yellow);
+}
+
+.dice.blueDice svg {
+  fill: var(--blue);
 }

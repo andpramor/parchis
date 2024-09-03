@@ -110,9 +110,10 @@ function App () {
           <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
           <br />
           <button onClick={handleRollDice}>Tirar el dado</button>
-          <Dice value={diceValue} />
         </div>
-        <Board turn={turn} />
+        <Board turn={turn}>
+          <Dice value={diceValue} color={turn} />
+        </Board>
         <Info turn={turn} />
       </div>
       {positions.map(position =>
