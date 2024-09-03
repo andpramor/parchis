@@ -3,6 +3,10 @@
     display: grid;
     place-items: center;
     transition: box-shadow 0.3s;
+    background-image: url(../../assets/dice.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 40%;
 }
 
 .colorHome--turn {
@@ -26,9 +30,9 @@
 }
 
 .colorHome svg {
-    width: 80%;
+    width: 60%;
     height: auto;
-    fill: var(--safe);
+    fill: transparent;
     transition: fill 0.5s, filter 0.5s;
 }
 

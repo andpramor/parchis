@@ -3,13 +3,16 @@ import './App.css'
 import { Board } from './components/Board/Board.jsx'
 import { Info } from './components/Info/Info.jsx'
 import { Piece } from './components/Piece/Piece.jsx'
+import { Dice } from './components/Dice/Dice.jsx'
+import { rollDice } from './services/roll.js'
 
 function App () {
   const [turn, setTurn] = useState('yellow')
-  // En el turno de cada color, primero se pone negro el svg de los dos dados. Cuando se le da a tirar el dado, se sustituye ese svg por uno de los de una sola cara (animación: varios random durante x tiempo, cambiando cada x tiempo y luego se fija uno). Cuando se fija, se mueve la ficha, deja de ser el turno, se pasa a blanco de nuevo el svg de fondo.
+  // Cuando se le da a tirar el dado, aparece en el centro de colorHome animación: varios random durante x tiempo, cambiando cada x tiempo y luego se fija uno y cambia de color.
 
   // Falta ver en el tema posicionamiento la casuística de dos fichas en la misma casilla, y de las casillas centrales.
 
+  // Guardar turn y pieces en localStorage
   const [pieces, setPieces] = useState([
     { id: 'bluePiece1', tile: 'tile22', color: 'blue' },
     { id: 'bluePiece2', tile: 'tile29', color: 'blue' },
@@ -31,6 +34,8 @@ function App () {
 
   const [positions, setPositions] = useState([])
 
+  const [diceValue, setDiceValue] = useState(1)
+
   const calcPositions = () => {
     const newPositions = pieces.map(piece => {
       const tile = document.getElementById(piece.tile)
@@ -50,7 +55,26 @@ function App () {
     window.addEventListener('resize', calcPositions)
 
     return () => window.removeEventListener('resize', calcPositions)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pieces])
+
+  const updatePiecePosition = (pieceId, newTile) => {
+    setPieces((prevPieces) => {
+      const index = prevPieces.findIndex(piece => piece.id === pieceId)
+
+      const updatedPieces = [
+        ...prevPieces.slice(0, index),
+        { ...prevPieces[index], tile: newTile },
+        ...prevPieces.slice(index + 1)
+      ]
+
+      return updatedPieces
+    })
+  }
+
+  const handleMoveExample = () => {
+    updatePiecePosition('greenPiece1', 'bluetile1')
+  }
 
   const handleNextTurn = () => {
     switch (turn) {
@@ -71,12 +95,22 @@ function App () {
     }
   }
 
+  const handleRollDice = () => {
+    const newDiceValue = rollDice()
+    setDiceValue(newDiceValue)
+  }
+
   return (
     <>
       <div className='app'>
         <div>
           <h1>PARCHÍS</h1>
-          <button onClick={handleNextTurn}>Siguiente jugador (provisional)</button>
+          <button onClick={handleNextTurn}>Siguiente jugador</button>
+          <button onClick={handleMoveExample}>Ejemplo: Mover ficha verde 1</button>
+          <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
+          <br />
+          <button onClick={handleRollDice}>Tirar el dado</button>
+          <Dice value={diceValue} />
         </div>
         <Board turn={turn} />
         <Info turn={turn} />

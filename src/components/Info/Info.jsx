@@ -11,9 +11,9 @@ export const Info = ({ turn }) => {
 
   return (
     <div className='info'>
-      <span>Turno de {turno}</span>
-      <span>Te quedan 4 fichas</span>
-      <span>Tirar el dado</span>
+      <span className='info--turn'>Turno de {turno}</span>
+      <span className='info--piecesLeft'>Te quedan 4 fichas</span>
+      <span className='info--roll'>Tirar el dado</span>
     </div>
   )
 }

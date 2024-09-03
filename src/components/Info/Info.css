@@ -1,4 +1,16 @@
 .info {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.info--turn {
+    text-align: start;
+}
+
+.info--piecesLeft {
+    text-align: center;
+}
+
+.info--roll {
+    text-align: end;
 }

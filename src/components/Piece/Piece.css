@@ -1,4 +1,5 @@
 .piece {
+    cursor: pointer;
     position: absolute;
     width: clamp(calc(400px / 21), calc(90vw / 21), calc(80dvh / 21));
     height: auto;
