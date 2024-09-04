@@ -2,27 +2,27 @@
   <!-- Background -->
   <rect x="1" y="1" width="628" height="628" fill="white" />
   <!-- Color tiles -->
-  <g fill="red">
+  <g fill="#f8333c">
 	<rect x="280" y="30" width="70" height="210"/>
 	<rect x="210" y="120" width="70" height="30"/>
     <polygon points="240,240 315,315 390,240" />
   </g>
-  <g fill="yellow">
+  <g fill="#f1db4b">
 	<rect x="280" y="390" width="70" height="210"/>
 	<rect x="350" y="480" width="70" height="30"/>
     <polygon points="240,390 315,315 390,390" />
   </g>
-  <g fill="green">
+  <g fill="#44af69">
 	<rect x="30" y="280" width="210" height="70"/>
 	<rect x="120" y="350" width="30" height="70"/>
     <polygon points="240,240 315,315 240,390" />
   </g>
-  <g fill="blue">
+  <g fill="#2b9eb3">
 	<rect x="390" y="280" width="210" height="70"/>
 	<rect x="480" y="210" width="30" height="70"/>
     <polygon points="390,240 315,315 390,390" />
   </g>
-  <g fill="lightgray">
+  <g fill="#cfdbd5">
 	<rect x="280" y="0" width="70" height="30"/>
 	<rect x="350" y="120" width="70" height="30"/>
 	<rect x="210" y="480" width="70" height="30"/>
