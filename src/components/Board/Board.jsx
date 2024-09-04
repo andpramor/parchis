@@ -130,6 +130,8 @@ export const Board = ({ children, turn }) => {
         </div>
         <ColorHome color='yellow' turn={turn === 'yellow'} />
         {children}
+        <div className='prueba' />
+        <div className='prueba2' />
       </div>
     </div>
   )
