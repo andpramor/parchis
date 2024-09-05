@@ -1,24 +1,26 @@
 .piece {
-    cursor: pointer;
-    position: absolute;
-    width: clamp(calc(400px / 21), calc(90vw / 21), calc(80dvh / 21));
-    height: auto;
-    z-index: 9999;
-    transition: top 0.5s, left 0.5s;
+  cursor: pointer;
+  position: absolute;
+  width: calc(
+    (0.8 / 21) * 100%
+  ); /* Given I get out the padding the svg has now, else use 1/21 */
+  height: auto;
+  z-index: 9999;
+  transition: top 0.5s, left 0.5s;
 }
 
 .piece.bluePiece {
-    fill: var(--blue);
+  fill: var(--blue);
 }
 
 .piece.redPiece {
-    fill: var(--red);
+  fill: var(--red);
 }
 
 .piece.greenPiece {
-    fill: var(--green);
+  fill: var(--green);
 }
 
 .piece.yellowPiece {
-    fill: var(--yellow);
+  fill: var(--yellow);
 }

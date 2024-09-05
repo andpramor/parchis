@@ -12,7 +12,7 @@ function App () {
 
   // Falta ver en el tema posicionamiento la casuística de dos fichas en la misma casilla, y de las casillas centrales.
   // El array de posiciones será así:
-  // [{ tile: 'tile1', topSideA: 22, leftSideA: 170, topSideB: 22, leftSideB: 180 }]
+  // [{ tile: 'tile1', sideA: {top: 22, left: 170}, sideB: {top: 22, left: 180} }, ...]
 
   // Guardar turn y pieces en localStorage
   const [pieces, setPieces] = useState([
