@@ -5,31 +5,34 @@ import { Info } from './components/Info/Info.jsx'
 import { Piece } from './components/Piece/Piece.jsx'
 import { Dice } from './components/Dice/Dice.jsx'
 import { rollDice } from './services/roll.js'
+import { positions } from './services/positions.js'
 
 function App () {
   const [turn, setTurn] = useState('yellow')
-  // Cuando se le da a tirar el dado, aparece en el centro de colorHome animación: varios random durante x tiempo, cambiando cada x tiempo y luego se fija uno y cambia de color.
+  // Cuando se le da a tirar el dado, aparece en el centro de colorHome
+  // la animación: varios random durante x tiempo, cambiando cada x tiempo
+  // y luego se fija uno y cambia de color.
 
   // Falta ver en el tema posicionamiento la casuística de dos fichas en la misma casilla, y de las casillas centrales.
 
   // Guardar turn y pieces en localStorage
   const [pieces, setPieces] = useState([
-    { id: 'bluePiece1', color: 'blue', tile: 'tile22', side: 'a' },
-    { id: 'bluePiece2', color: 'blue', tile: 'tile29', side: 'a' },
-    { id: 'bluePiece3', color: 'blue', tile: 'redtile1', side: 'a' },
-    { id: 'bluePiece4', color: 'blue', tile: 'tile46', side: 'a' },
-    { id: 'redPiece1', color: 'red', tile: 'tile39', side: 'a' },
-    { id: 'redPiece2', color: 'red', tile: 'tile40', side: 'a' },
-    { id: 'redPiece3', color: 'red', tile: 'tile56', side: 'a' },
-    { id: 'redPiece4', color: 'red', tile: 'redtile6', side: 'a' },
-    { id: 'yellowPiece1', color: 'yellow', tile: 'tile5', side: 'a' },
-    { id: 'yellowPiece2', color: 'yellow', tile: 'tile7', side: 'a' },
-    { id: 'yellowPiece3', color: 'yellow', tile: 'tile12', side: 'a' },
-    { id: 'yellowPiece4', color: 'yellow', tile: 'yellowtile1', side: 'a' },
-    { id: 'greenPiece1', color: 'green', tile: 'tile67', side: 'a' },
-    { id: 'greenPiece2', color: 'green', tile: 'tile2', side: 'a' },
-    { id: 'greenPiece3', color: 'green', tile: 'tile4', side: 'a' },
-    { id: 'greenPiece4', color: 'green', tile: 'greentile8', side: 'a' }
+    { id: 'bluePiece1', color: 'blue', tile: 'tile22', side: true },
+    { id: 'bluePiece2', color: 'blue', tile: 'tile29', side: true },
+    { id: 'bluePiece3', color: 'blue', tile: 'redTile1', side: true },
+    { id: 'bluePiece4', color: 'blue', tile: 'tile46', side: true },
+    { id: 'redPiece1', color: 'red', tile: 'tile39', side: true },
+    { id: 'redPiece2', color: 'red', tile: 'tile40', side: true },
+    { id: 'redPiece3', color: 'red', tile: 'tile56', side: true },
+    { id: 'redPiece4', color: 'red', tile: 'redTile6', side: true },
+    { id: 'yellowPiece1', color: 'yellow', tile: 'tile5', side: true },
+    { id: 'yellowPiece2', color: 'yellow', tile: 'tile7', side: true },
+    { id: 'yellowPiece3', color: 'yellow', tile: 'tile12', side: true },
+    { id: 'yellowPiece4', color: 'yellow', tile: 'yellowTile1', side: true },
+    { id: 'greenPiece1', color: 'green', tile: 'tile67', side: true },
+    { id: 'greenPiece2', color: 'green', tile: 'tile2', side: true },
+    { id: 'greenPiece3', color: 'green', tile: 'tile4', side: true },
+    { id: 'greenPiece4', color: 'green', tile: 'greenTile8', side: true }
   ])
 
   const [diceValue, setDiceValue] = useState(1)
@@ -87,18 +90,18 @@ function App () {
         </div>
         <Board turn={turn}>
           <Dice value={diceValue} color={turn} />
+          {/* Este mapeo está mal, tengo que buscar la posición de la pieza (tile y position 1 o 2, o 0 o 1, o true o false) y buscar los % en el array de posiciones que está pendiente de hacer */}
+          {pieces.map(piece =>
+            <Piece
+              key={piece.id}
+              id={piece.id}
+              color={piece.color}
+              top={piece.side ? positions[piece.tile].sideA.top : positions[piece.tile].sideB.top}
+              left={piece.side ? positions[piece.tile].sideA.left : positions[piece.tile].sideB.left}
+            />)}
         </Board>
         <Info turn={turn} />
       </div>
-      {/* Este mapeo está mal, tengo que buscar la posición de la pieza (tile y position 1 o 2, o 0 o 1, o true o false) y buscar los % en el array de posiciones que está pendiente de hacer */}
-      {/* pieces.map(position =>
-        <Piece
-          key={position.id}
-          id={position.id}
-          color={position.color}
-          top={position.top}
-          left={position.left}
-        />) */}
     </>
   )
 }
