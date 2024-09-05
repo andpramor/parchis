@@ -2,8 +2,8 @@
   cursor: pointer;
   position: absolute;
   width: calc(
-    (0.8 / 21) * 100%
-  ); /* Given I get out the padding the svg has now, else use 1/21 */
+    (1 / 21) * 100%
+  ); /* Get rid of the padding the svg has, then use 0.8 instead of 1 out of 21. */
   height: auto;
   z-index: 9999;
   transition: top 0.5s, left 0.5s;

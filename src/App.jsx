@@ -11,8 +11,6 @@ function App () {
   // Cuando se le da a tirar el dado, aparece en el centro de colorHome animación: varios random durante x tiempo, cambiando cada x tiempo y luego se fija uno y cambia de color.
 
   // Falta ver en el tema posicionamiento la casuística de dos fichas en la misma casilla, y de las casillas centrales.
-  // El array de posiciones será así:
-  // [{ tile: 'tile1', sideA: {top: 22, left: 170}, sideB: {top: 22, left: 180} }, ...]
 
   // Guardar turn y pieces en localStorage
   const [pieces, setPieces] = useState([
