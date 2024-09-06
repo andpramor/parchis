@@ -45,7 +45,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 50%;
   height: auto;
   fill: transparent;
   transition: fill 0.5s, filter 0.5s;
@@ -60,18 +60,31 @@
   position: absolute;
   color: transparent;
   font-weight: bold;
-  top: -1rem;
   left: 0;
   width: 100%;
   text-align: center;
-  transition: top 0.3s, color 0.3s;
+  transition: top 0.3s, bottom 0.3s, color 0.3s;
   pointer-events: none;
   cursor: default;
   user-select: none;
 }
-
-.colorHome--roll.showRoll {
+.blueHome .colorHome--roll,
+.redHome .colorHome--roll {
+  top: -1rem;
+}
+.greenHome .colorHome--roll,
+.yellowHome .colorHome--roll {
+  bottom: -1rem;
+}
+.blueHome .colorHome--roll.showRoll,
+.redHome .colorHome--roll.showRoll {
   top: 8px;
+}
+.greenHome .colorHome--roll.showRoll,
+.yellowHome .colorHome--roll.showRoll {
+  bottom: 8px;
+}
+.colorHome--roll.showRoll {
   color: white;
 }
 
