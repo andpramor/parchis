@@ -21,7 +21,7 @@ function App () {
   const [diceValue, setDiceValue] = useState(1)
 
   // REVISAR ESTE
-  const updatePieces = (pieceId, newTile) => {
+  const updatePieces = ({ pieceId, newTile = 'tile9' }) => {
     setPieces((prevPieces) => {
       const index = prevPieces.findIndex(piece => piece.id === pieceId)
 
@@ -61,13 +61,13 @@ function App () {
     setDiceValue(newDiceValue)
   }
 
-  const handleClickOnPiece = () => {
+  const handleClickOnPiece = (id) => {
     // Valor del dado
-    // Necesito instanciar el evento para traerme el id de la ficha
     // Comprobar si es el turno de ese color y si le toca mover (y no tirar el dado)
     // Comprobar si el movimiento es posible (destino existe, hueco libre en destino y sin barreras de por medio)
     // Si cumple todo, llamar a updatePieces con el id de la ficha y la nueva posición
     // Calcular los destinos posibles al tirar el dado y pasar a la ficha un atributo que indique que puede moverse, para que sólo esas fichas muestren la sombra y el pointer, actualizar un estado con fichasQueSePuedenMover con las fichas y los destinos, así no hay que comprobar nada aquí más que si la ficha clicada está en ese array
+    updatePieces({ pieceId: id })
   }
 
   return (
@@ -84,6 +84,7 @@ function App () {
             <Piece
               key={piece.id}
               id={piece.id}
+              onClick={() => handleClickOnPiece(piece.id)}
               color={piece.color}
               top={piece.side ? positions[piece.tile].sideA.top : positions[piece.tile].sideB.top}
               left={piece.side ? positions[piece.tile].sideA.left : positions[piece.tile].sideB.left}
