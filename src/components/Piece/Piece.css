@@ -16,6 +16,9 @@
 .piece.bPiece {
   background-color: aqua;
 }
+.piece.cPiece {
+  background-color: greenyellow;
+}
 
 .piece.bluePiece {
   background-color: var(--blue);

@@ -67,9 +67,8 @@ function App () {
         <div>
           <h1>PARCHÍS</h1>
           <button onClick={handleNextTurn}>Siguiente jugador</button>
-          <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
-          <br />
           <button onClick={handleRollDice}>Tirar el dado</button>
+          <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
         </div>
         <Board turn={turn}>
           {/* <Dice value={diceValue} color={turn} /> */}
