@@ -6,10 +6,8 @@ export const positions = {
   tile5: { sideA: { top: 495 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 495 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile6: { sideA: { top: 465 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 465 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile7: { sideA: { top: 435 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 435 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
-
   tile8: { sideA: { top: 405 / 630 * 100, left: 363 / 630 * 100 }, sideB: { top: 405 / 630 * 100, left: 388 / 630 * 100 } },
   tile9: { sideA: { top: 363 / 630 * 100, left: 405 / 630 * 100 }, sideB: { top: 388 / 630 * 100, left: 405 / 630 * 100 } },
-
   tile10: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 435 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 435 / 630 * 100 } },
   tile11: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 465 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 465 / 630 * 100 } },
   tile12: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 495 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 495 / 630 * 100 } },
@@ -17,9 +15,7 @@ export const positions = {
   tile14: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 555 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 555 / 630 * 100 } },
   tile15: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 585 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 585 / 630 * 100 } },
   tile16: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 615 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 615 / 630 * 100 } },
-
   tile17: { sideA: { top: (280 + 58 / 3) / 630 * 100, left: 615 / 630 * 100 }, sideB: { top: (280 + 152 / 3) / 630 * 100, left: 615 / 630 * 100 } },
-
   tile18: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 615 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 615 / 630 * 100 } },
   tile19: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 585 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 585 / 630 * 100 } },
   tile20: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 555 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 555 / 630 * 100 } },
@@ -27,10 +23,8 @@ export const positions = {
   tile22: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 495 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 495 / 630 * 100 } },
   tile23: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 465 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 465 / 630 * 100 } },
   tile24: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 435 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 435 / 630 * 100 } },
-
   tile25: { sideA: { top: 267 / 630 * 100, left: 405 / 630 * 100 }, sideB: { top: 242 / 630 * 100, left: 405 / 630 * 100 } },
   tile26: { sideA: { top: 225 / 630 * 100, left: 363 / 630 * 100 }, sideB: { top: 225 / 630 * 100, left: 388 / 630 * 100 } },
-
   tile27: { sideA: { top: 195 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 195 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile28: { sideA: { top: 165 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 165 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile29: { sideA: { top: 135 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 135 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
@@ -38,9 +32,7 @@ export const positions = {
   tile31: { sideA: { top: 75 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 75 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile32: { sideA: { top: 45 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 45 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
   tile33: { sideA: { top: 15 / 630 * 100, left: (350 + 58 / 3) / 630 * 100 }, sideB: { top: 15 / 630 * 100, left: (350 + 152 / 3) / 630 * 100 } },
-
   tile34: { sideA: { top: 15 / 630 * 100, left: (280 + 58 / 3) / 630 * 100 }, sideB: { top: 15 / 630 * 100, left: (280 + 152 / 3) / 630 * 100 } },
-
   tile35: { sideA: { top: 15 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 15 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile36: { sideA: { top: 45 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 45 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile37: { sideA: { top: 75 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 75 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
@@ -48,10 +40,8 @@ export const positions = {
   tile39: { sideA: { top: 135 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 135 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile40: { sideA: { top: 165 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 165 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile41: { sideA: { top: 195 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 195 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
-
   tile42: { sideA: { top: 225 / 630 * 100, left: 267 / 630 * 100 }, sideB: { top: 225 / 630 * 100, left: 242 / 630 * 100 } },
   tile43: { sideA: { top: 267 / 630 * 100, left: 225 / 630 * 100 }, sideB: { top: 242 / 630 * 100, left: 225 / 630 * 100 } },
-
   tile44: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 195 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 195 / 630 * 100 } },
   tile45: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 165 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 165 / 630 * 100 } },
   tile46: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 135 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 135 / 630 * 100 } },
@@ -59,9 +49,7 @@ export const positions = {
   tile48: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 75 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 75 / 630 * 100 } },
   tile49: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 45 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 45 / 630 * 100 } },
   tile50: { sideA: { top: (210 + 152 / 3) / 630 * 100, left: 15 / 630 * 100 }, sideB: { top: (210 + 58 / 3) / 630 * 100, left: 15 / 630 * 100 } },
-
   tile51: { sideA: { top: (280 + 152 / 3) / 630 * 100, left: 15 / 630 * 100 }, sideB: { top: (280 + 58 / 3) / 630 * 100, left: 15 / 630 * 100 } },
-
   tile52: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 15 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 15 / 630 * 100 } },
   tile53: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 45 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 45 / 630 * 100 } },
   tile54: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 75 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 75 / 630 * 100 } },
@@ -69,10 +57,8 @@ export const positions = {
   tile56: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 135 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 135 / 630 * 100 } },
   tile57: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 165 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 165 / 630 * 100 } },
   tile58: { sideA: { top: (350 + 58 / 3) / 630 * 100, left: 195 / 630 * 100 }, sideB: { top: (350 + 152 / 3) / 630 * 100, left: 195 / 630 * 100 } },
-
   tile59: { sideA: { top: 363 / 630 * 100, left: 225 / 630 * 100 }, sideB: { top: 388 / 630 * 100, left: 225 / 630 * 100 } },
   tile60: { sideA: { top: 405 / 630 * 100, left: 267 / 630 * 100 }, sideB: { top: 405 / 630 * 100, left: 242 / 630 * 100 } },
-
   tile61: { sideA: { top: 435 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 435 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile62: { sideA: { top: 465 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 465 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile63: { sideA: { top: 495 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 495 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
@@ -80,7 +66,6 @@ export const positions = {
   tile65: { sideA: { top: 555 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 555 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile66: { sideA: { top: 585 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 585 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
   tile67: { sideA: { top: 615 / 630 * 100, left: (210 + 152 / 3) / 630 * 100 }, sideB: { top: 615 / 630 * 100, left: (210 + 58 / 3) / 630 * 100 } },
-
   tile68: { sideA: { top: 615 / 630 * 100, left: (280 + 152 / 3) / 630 * 100 }, sideB: { top: 615 / 630 * 100, left: (280 + 58 / 3) / 630 * 100 } },
 
   yellowHomeTile1: { sideA: { top: 465 / 630 * 100, left: 440 / 630 * 100 }, sideB: { top: 495 / 630 * 100, left: 440 / 630 * 100 } },
@@ -137,6 +122,26 @@ export const positions = {
 }
 
 export const initialPieces = [
+
+  { id: 'yellow1', color: 'yellow', tile: 'yellowHomeTile1', side: true },
+  { id: 'yellow2', color: 'yellow', tile: 'yellowHomeTile1', side: false },
+  { id: 'yellow3', color: 'yellow', tile: 'yellowHomeTile2', side: true },
+  { id: 'yellow4', color: 'yellow', tile: 'yellowHomeTile2', side: false },
+  { id: 'blue1', color: 'blue', tile: 'blueHomeTile1', side: true },
+  { id: 'blue2', color: 'blue', tile: 'blueHomeTile1', side: false },
+  { id: 'blue3', color: 'blue', tile: 'blueHomeTile2', side: true },
+  { id: 'blue4', color: 'blue', tile: 'blueHomeTile2', side: false },
+  { id: 'red1', color: 'red', tile: 'redHomeTile1', side: true },
+  { id: 'red2', color: 'red', tile: 'redHomeTile1', side: false },
+  { id: 'red3', color: 'red', tile: 'redHomeTile2', side: true },
+  { id: 'red4', color: 'red', tile: 'redHomeTile2', side: false },
+  { id: 'green1', color: 'green', tile: 'greenHomeTile1', side: true },
+  { id: 'green2', color: 'green', tile: 'greenHomeTile1', side: false },
+  { id: 'green3', color: 'green', tile: 'greenHomeTile2', side: true },
+  { id: 'green4', color: 'green', tile: 'greenHomeTile2', side: false }
+]
+
+export const auxPieceForEveryPosition = [
   { id: 'y1', color: 'yellow', tile: 'yellowTile1', side: true },
   { id: 'y2', color: 'yellow', tile: 'yellowTile1', side: false },
   { id: 'y3', color: 'yellow', tile: 'yellowTile2', side: true },
@@ -210,6 +215,7 @@ export const initialPieces = [
   { id: 'gout2', color: 'green', tile: 'outTile7', side: false },
   { id: 'gout3', color: 'green', tile: 'outTile8', side: true },
   { id: 'gout4', color: 'green', tile: 'outTile8', side: false },
+
   { id: '1A', color: 'a', tile: 'tile1', side: true },
   { id: '2A', color: 'a', tile: 'tile2', side: true },
   { id: '3A', color: 'a', tile: 'tile3', side: true },
@@ -279,9 +285,6 @@ export const initialPieces = [
   { id: '66A', color: 'a', tile: 'tile66', side: true },
   { id: '67A', color: 'a', tile: 'tile67', side: true },
   { id: '68A', color: 'a', tile: 'tile68', side: true },
-  { id: '68B', color: 'b', tile: 'tile68', side: false },
-
-  { id: 'FIN', color: 'c', tile: 'endTile' },
 
   { id: '1B', color: 'b', tile: 'tile1', side: false },
   { id: '2B', color: 'b', tile: 'tile2', side: false },
@@ -349,21 +352,7 @@ export const initialPieces = [
   { id: '65B', color: 'b', tile: 'tile65', side: false },
   { id: '66B', color: 'b', tile: 'tile66', side: false },
   { id: '67B', color: 'b', tile: 'tile67', side: false },
+  { id: '68B', color: 'b', tile: 'tile68', side: false },
 
-  { id: 'yellow1', color: 'yellow', tile: 'yellowHomeTile1', side: true },
-  { id: 'yellow2', color: 'yellow', tile: 'yellowHomeTile1', side: false },
-  { id: 'yellow3', color: 'yellow', tile: 'yellowHomeTile2', side: true },
-  { id: 'yellow4', color: 'yellow', tile: 'yellowHomeTile2', side: false },
-  { id: 'blue1', color: 'blue', tile: 'blueHomeTile1', side: true },
-  { id: 'blue2', color: 'blue', tile: 'blueHomeTile1', side: false },
-  { id: 'blue3', color: 'blue', tile: 'blueHomeTile2', side: true },
-  { id: 'blue4', color: 'blue', tile: 'blueHomeTile2', side: false },
-  { id: 'red1', color: 'red', tile: 'redHomeTile1', side: true },
-  { id: 'red2', color: 'red', tile: 'redHomeTile1', side: false },
-  { id: 'red3', color: 'red', tile: 'redHomeTile2', side: true },
-  { id: 'red4', color: 'red', tile: 'redHomeTile2', side: false },
-  { id: 'green1', color: 'green', tile: 'greenHomeTile1', side: true },
-  { id: 'green2', color: 'green', tile: 'greenHomeTile1', side: false },
-  { id: 'green3', color: 'green', tile: 'greenHomeTile2', side: true },
-  { id: 'green4', color: 'green', tile: 'greenHomeTile2', side: false }
+  { id: 'FIN', color: 'c', tile: 'endTile' }
 ]

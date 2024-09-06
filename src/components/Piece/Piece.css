@@ -1,23 +1,25 @@
 .piece {
-  cursor: pointer;
+  cursor: default;
   position: absolute;
   z-index: 9999;
   width: calc(24 / 630 * 100%);
   height: calc(24 / 630 * 100%);
-  border-radius: 500px;
+  border-radius: 50%;
   border: 2px solid black;
   transform: translate(-50%, -50%);
   transition: top 0.5s, left 0.5s;
 }
 
-.piece.aPiece {
-  background-color: pink;
+.pieceTurn {
+  cursor: pointer;
 }
-.piece.bPiece {
-  background-color: aqua;
+
+.pieceTurn:hover {
+  box-shadow: 0 0 3px black;
 }
-.piece.cPiece {
-  background-color: greenyellow;
+
+.pieceTurn:active {
+  box-shadow: none;
 }
 
 .piece.bluePiece {

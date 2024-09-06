@@ -61,6 +61,15 @@ function App () {
     setDiceValue(newDiceValue)
   }
 
+  const handleClickOnPiece = () => {
+    // Valor del dado
+    // Necesito instanciar el evento para traerme el id de la ficha
+    // Comprobar si es el turno de ese color y si le toca mover (y no tirar el dado)
+    // Comprobar si el movimiento es posible (destino existe, hueco libre en destino y sin barreras de por medio)
+    // Si cumple todo, llamar a updatePieces con el id de la ficha y la nueva posición
+    // Calcular los destinos posibles al tirar el dado y pasar a la ficha un atributo que indique que puede moverse, para que sólo esas fichas muestren la sombra y el pointer, actualizar un estado con fichasQueSePuedenMover con las fichas y los destinos, así no hay que comprobar nada aquí más que si la ficha clicada está en ese array
+  }
+
   return (
     <>
       <div className='app'>
@@ -71,8 +80,6 @@ function App () {
           <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
         </div>
         <Board turn={turn}>
-          {/* <Dice value={diceValue} color={turn} /> */}
-          {/* Este mapeo está mal, tengo que buscar la posición de la pieza (tile y position 1 o 2, o 0 o 1, o true o false) y buscar los % en el array de posiciones que está pendiente de hacer */}
           {pieces.map(piece =>
             <Piece
               key={piece.id}
@@ -81,6 +88,7 @@ function App () {
               top={piece.side ? positions[piece.tile].sideA.top : positions[piece.tile].sideB.top}
               left={piece.side ? positions[piece.tile].sideA.left : positions[piece.tile].sideB.left}
               side={piece.side}
+              turn={piece.color === turn}
             />)}
         </Board>
         <Info turn={turn} />
