@@ -56,7 +56,7 @@
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
-.colorHome--roll {
+.colorHome--message {
   position: absolute;
   color: transparent;
   font-weight: bold;
@@ -68,38 +68,24 @@
   cursor: default;
   user-select: none;
 }
-.blueHome .colorHome--roll,
-.redHome .colorHome--roll {
+.blueHome .colorHome--message,
+.redHome .colorHome--message {
   top: -1rem;
 }
-.greenHome .colorHome--roll,
-.yellowHome .colorHome--roll {
+.greenHome .colorHome--message,
+.yellowHome .colorHome--message {
   bottom: -1rem;
 }
-.blueHome .colorHome--roll.showRoll,
-.redHome .colorHome--roll.showRoll {
+.blueHome .colorHome--message.showRoll,
+.redHome .colorHome--message.showRoll {
   top: 8px;
 }
-.greenHome .colorHome--roll.showRoll,
-.yellowHome .colorHome--roll.showRoll {
+.greenHome .colorHome--message.showRoll,
+.yellowHome .colorHome--message.showRoll {
   bottom: 8px;
 }
-.colorHome--roll.showRoll {
+.colorHome--message.showRoll {
   color: white;
-}
-
-.colorHome--move {
-  position: absolute;
-  color: transparent;
-  font-weight: bold;
-  top: -1rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  transition: top 0.3s, color 0.3s;
-  pointer-events: none;
-  cursor: default;
-  user-select: none;
 }
 
 .colorHome:hover .colorHome--move {

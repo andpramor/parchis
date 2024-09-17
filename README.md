@@ -1,0 +1,5 @@
+# Parchisi
+A web version of the classic parchisi game, for four players (playing locally on the same machine, for now).
+## About
+For this project, I focused on separation of concerns, trying to implement best practices wherever I can. I used SVGs for every image of the site, depeloped the board for the game as an SVG itself, calculated the positions for every tile of the board as to possibilities, since two tokens from the same player can go to a single tile, or even from different players if it's a safe tile.
+<p>I separated as much logic as I could from react components to keep the game framework agnostic, so tomorrow I could start an Angular project and reuse the logic without much trouble, and maintained components as representational as possible, making them as atomic and reusable as I could, although there's some refactoring due: I want to extract react logic into custom hooks when possible to clean up components and ease the possibility of reusing the logic itself.</p>

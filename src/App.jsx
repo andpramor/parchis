@@ -3,29 +3,24 @@ import './App.css'
 import { Board } from './components/Board/Board.jsx'
 import { Info } from './components/Info/Info.jsx'
 import { Piece } from './components/Piece/Piece.jsx'
-import { Dice } from './components/Dice/Dice.jsx'
 import { rollDice } from './services/roll.js'
-import { initialPieces, positions } from './services/positions.js'
+import { INITIAL_PIECES_POSITIONS, positions } from './services/positions.js'
 
 function App () {
   const [turn, setTurn] = useState('yellow')
-  // Cuando se le da a tirar el dado, aparece en el centro de colorHome
-  // la animación: varios random durante x tiempo, cambiando cada x tiempo
-  // y luego se fija uno y cambia de color.
-
-  // Falta ver en el tema posicionamiento la casuística de dos fichas en la misma casilla, y de las casillas centrales.
+  const [whatNow, setWhatNow] = useState('roll')
+  const [moves, setMoves] = useState(0)
+  const [lastMoved, setLastMoved] = useState('')
 
   // Guardar turn y pieces en localStorage
-  const [pieces, setPieces] = useState(initialPieces)
+  const [pieces, setPieces] = useState(INITIAL_PIECES_POSITIONS)
 
-  const [diceValue, setDiceValue] = useState(1)
+  const [diceValue, setDiceValue] = useState(0)
 
   // REVISAR ESTE
-  const updatePieces = ({ pieceId, newTile = 'tile9' }) => {
+  const updatePieces = ({ pieceId, newTile = 'tile09' }) => {
     setPieces((prevPieces) => {
       const index = prevPieces.findIndex(piece => piece.id === pieceId)
-
-      // Hay que definir la forma de ver el side al que irá, según esté ocupada ya la casilla o no, después de comprobar que el movimiento es legal, puede ir a side A si está libre o a side B si ya hay una ficha en el A.
 
       const updatedPieces = [
         ...prevPieces.slice(0, index),
@@ -33,11 +28,16 @@ function App () {
         ...prevPieces.slice(index + 1)
       ]
 
+      setWhatNow('roll')
+
       return updatedPieces
     })
+    setLastMoved(pieceId)
   }
 
   const handleNextTurn = () => {
+    setMoves(0)
+    setWhatNow('roll')
     switch (turn) {
       case 'yellow':
         setTurn('blue')
@@ -59,6 +59,25 @@ function App () {
   const handleRollDice = () => {
     const newDiceValue = rollDice()
     setDiceValue(newDiceValue)
+    if (newDiceValue === 6 && moves === 2) {
+      setPieces((prevPieces) => {
+        const index = prevPieces.findIndex(piece => piece.id === lastMoved)
+
+        const updatedPieces = [
+          ...prevPieces.slice(0, index),
+          { ...prevPieces[index], tile: INITIAL_PIECES_POSITIONS[index].tile, side: INITIAL_PIECES_POSITIONS[index].side },
+          ...prevPieces.slice(index + 1)
+        ]
+
+        setWhatNow('roll')
+
+        return updatedPieces
+      })
+
+      handleNextTurn()
+    } else {
+      setWhatNow('move')
+    }
   }
 
   const handleClickOnPiece = (id) => {
@@ -66,8 +85,17 @@ function App () {
     // Comprobar si es el turno de ese color y si le toca mover (y no tirar el dado)
     // Comprobar si el movimiento es posible (destino existe, hueco libre en destino y sin barreras de por medio)
     // Si cumple todo, llamar a updatePieces con el id de la ficha y la nueva posición
-    // Calcular los destinos posibles al tirar el dado y pasar a la ficha un atributo que indique que puede moverse, para que sólo esas fichas muestren la sombra y el pointer, actualizar un estado con fichasQueSePuedenMover con las fichas y los destinos, así no hay que comprobar nada aquí más que si la ficha clicada está en ese array
+    // Calcular los destinos posibles al tirar el dado y pasar a la ficha un atributo que indique que puede moverse, para que sólo esas fichas muestren la sombra y el pointer, actualizar un estado con fichasQueSePuedenMover con las fichas y los destinos, así no hay que comprobar nada aquí más que si la ficha clicada está en ese array.
+    setMoves(prevMoves => {
+      const newMoves = prevMoves + 1
+      return newMoves
+    })
     updatePieces({ pieceId: id })
+    if (diceValue === 6) {
+      setWhatNow('roll')
+    } else {
+      handleNextTurn()
+    }
   }
 
   return (
@@ -75,11 +103,11 @@ function App () {
       <div className='app'>
         <div>
           <h1>PARCHÍS</h1>
-          <button onClick={handleNextTurn}>Siguiente jugador</button>
+          {/* <button onClick={handleNextTurn}>Siguiente jugador</button> */}
           <button onClick={handleRollDice}>Tirar el dado</button>
           <button style={{ float: 'right', marginRight: 0 }}>Reiniciar partida</button>
         </div>
-        <Board turn={turn}>
+        <Board turn={turn} diceValue={diceValue} whatNow={whatNow}>
           {pieces.map(piece =>
             <Piece
               key={piece.id}

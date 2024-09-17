@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { ColorHome } from '../ColorHome/ColorHome'
 import './Board.css'
 
-export const Board = ({ children, turn }) => {
+export const Board = ({ children, turn, diceValue, whatNow }) => {
   const boardRef = useRef(null)
 
   useEffect(() => {
@@ -32,10 +32,10 @@ export const Board = ({ children, turn }) => {
   return (
     <div ref={boardRef} className='board-container'>
       <div className='board'>
-        <ColorHome color='red' turn={turn === 'red'} />
-        <ColorHome color='blue' turn={turn === 'blue'} />
-        <ColorHome color='green' turn={turn === 'green'} />
-        <ColorHome color='yellow' turn={turn === 'yellow'} />
+        <ColorHome color='red' turn={turn === 'red'} diceValue={diceValue} whatNow={whatNow} />
+        <ColorHome color='blue' turn={turn === 'blue'} diceValue={diceValue} whatNow={whatNow} />
+        <ColorHome color='green' turn={turn === 'green'} diceValue={diceValue} whatNow={whatNow} />
+        <ColorHome color='yellow' turn={turn === 'yellow'} diceValue={diceValue} whatNow={whatNow} />
         {children}
       </div>
     </div>

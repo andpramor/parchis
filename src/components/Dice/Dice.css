@@ -1,30 +1,34 @@
 .dice {
-  width: clamp(calc(5 * 400px / 30), calc(5 * 90vw / 30), calc(5 * 80dvh / 30));
+  width: 100%;
+  height: 100%;
   display: grid;
   place-items: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .dice svg {
-  transition: fill 0.3s;
+  transition: fill 0.3s, stroke 0.3s;
 }
 
-.dice.redDice svg {
+.dice.redDice.showDice svg {
   fill: var(--red);
+  stroke: white;
 }
 
-.dice.greenDice svg {
+.dice.greenDice.showDice svg {
   fill: var(--green);
+  stroke: white;
 }
 
-.dice.yellowDice svg {
+.dice.yellowDice.showDice svg {
   fill: var(--yellow);
+  stroke: white;
 }
 
-.dice.blueDice svg {
+.dice.blueDice.showDice svg {
   fill: var(--blue);
+  stroke: white;
 }

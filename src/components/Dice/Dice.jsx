@@ -1,7 +1,7 @@
 import './Dice.css'
 import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6 } from './DicesSVG/Dices.jsx'
 
-export const Dice = ({ value, color }) => {
+export const Dice = ({ value, color, turn }) => {
   const renderDice = () => {
     switch (value) {
       case 1:
@@ -19,7 +19,7 @@ export const Dice = ({ value, color }) => {
     }
   }
   return (
-    <div className={`dice ${color}Dice`}>
+    <div className={`dice ${color}Dice ${turn ? 'showDice' : ''}`}>
       {renderDice()}
     </div>
   )
